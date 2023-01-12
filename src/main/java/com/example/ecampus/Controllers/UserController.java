@@ -35,7 +35,7 @@ public class UserController {
         return ResponseEntity.ok(userService.getAllUsers());
     }
 
-    @GetMapping("/{id}/roles)")
+    @GetMapping("/{id}/roles")
     public Collection<UserRole> getUsersAllRoles(@PathVariable Long id){
 
         return userService.getUsersRolesByUserId(id);
@@ -89,7 +89,7 @@ public class UserController {
         return ResponseEntity.ok(u);
 
     }
-    //@Secured("ROLE_INSAN_KAYNAKLARI")
+    @Secured("ROLE_INSAN_KAYNAKLARI")
     @PostMapping("/personeller")
     public User personelEkleIK(@RequestBody User user)
     {
@@ -159,7 +159,7 @@ public class UserController {
 
     @GetMapping("/{kimlikno}/derskayitlari")
     public ResponseEntity<List<DersKayit>> getDersKayitlariByKimlikNo(@PathVariable String kimlikno){
-        return ResponseEntity.ok(dersKayitService.getAllDerskayitlaribykimlikno(kimlikno));
+        return ResponseEntity.ok(dersKayitService.getAllDerskayitlaribykimliknoo(kimlikno));
     }
 
 

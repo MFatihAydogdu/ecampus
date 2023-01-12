@@ -76,6 +76,7 @@ public class EcampusApplication {
 
 
 
+            userService.saveUser(new User(null,"melih","melih@email.com","12345","0531346235","20-10-2000","20-10-2020",null,new ArrayList<>(),"21345431",new ArrayList<>()));
 
             userService.saveUser(new User(null,"rafet","rafet@email.com","12345","0531346235","20-10-2000","20-10-2020",null,new ArrayList<>(),"21345431",new ArrayList<>()));
             userService.saveUser(new User(null,"fatih","fatih@email.com","12345","1","21-5-2000","21-2-2020",null,new ArrayList<>(),"1",new ArrayList<>()));
@@ -85,6 +86,10 @@ public class EcampusApplication {
             userService.addRoleToUser("rafet", "ROLE_USER");
             userService.addRoleToUser("rafet", "ROLE_ADMIN");
             userService.addRoleToUser("rafet", "ROLE_INSAN_KAYNAKLARI");
+            userService.addRoleToUser("melih", "ROLE_ADMIN");
+            userService.addRoleToUser("melih", "ROLE_OGRENCI_ISLERI");
+
+
 
             userService.addRoleToUser("fatih", "ROLE_OGRENCI");
             userService.addRoleToUser("fatih", "ROLE_PERSONEL");
